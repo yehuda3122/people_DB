@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "MDk2y2TUZbKRaTs+SJnHWCBmwgwHlf5NK2E9nv2Gctc=",
+  "Source": "PeopleDataApi",
+  "BasePath": "_content/PeopleDataApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

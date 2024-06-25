@@ -1,0 +1,41 @@
+<form (ngSubmit)="onSubmit()" #personForm="ngForm">
+    <div>
+        <label for="firstName">Number Id:</label>
+        <input type="text" id="numberId" [(ngModel)]="person.numberId" name="numberId" required minlength="9" maxlength="9">
+        <div *ngIf="personForm.submitted && !personForm.controls['numberId'].valid">
+          Number Id is required and must be 9 characters.
+        </div>
+      </div>
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" [(ngModel)]="person.firstName" name="firstName" required minlength="1" maxlength="50">
+      <div *ngIf="personForm.submitted && !personForm.controls['firstName'].valid">
+        First Name is required and must be between 1 and 50 characters.
+      </div>
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" [(ngModel)]="person.lastName" name="lastName" required minlength="1" maxlength="50">
+      <div *ngIf="personForm.submitted && !personForm.controls['lastName'].valid">
+        Last Name is required and must be between 1 and 50 characters.
+      </div>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="person.email" name="email" required email>
+      <div *ngIf="personForm.submitted && !personForm.controls['email'].valid">
+        Valid Email is required.
+      </div>
+    </div>
+    <div>
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" [(ngModel)]="person.phoneNumber" name="phoneNumber" required pattern="^((\\+91-?)|0)?[0-9]{10}$">
+      <div *ngIf="personForm.submitted && !personForm.controls['phoneNumber'].valid">
+        Valid Phone Number is required.
+      </div>
+    </div>
+    <button type="submit" [disabled]="!personForm.form.valid">Add Person</button>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+  </form>
+  

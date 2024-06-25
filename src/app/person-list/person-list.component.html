@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let person of people">
+      <div>
+        <strong>{{ person.firstName }} {{ person.lastName }}</strong><br>
+        ID: {{ person.numberId }}<br>
+        Email: {{ person.email }}<br>
+        Phone: {{ person.phoneNumber }}
+      </div>
+      <button (click)="deletePerson(person.numberId)">Delete</button>
+    </li>
+  </ul>
+  
