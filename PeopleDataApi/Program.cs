@@ -15,7 +15,7 @@ builder.Services.AddDbContext<PeopleContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Add CORS policy
+// CORS policy
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
@@ -29,7 +29,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Ensure the database is created at startup
+//  database creation
 // using (var scope = app.Services.CreateScope())
 // {
 //     var services = scope.ServiceProvider;
@@ -37,7 +37,7 @@ var app = builder.Build();
 //     context.Database.Migrate();
 // }
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();

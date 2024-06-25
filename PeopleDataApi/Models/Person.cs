@@ -5,7 +5,7 @@ namespace PeopleDataApi.Models
     public class Person
     {
         [Required]
-        public int NumberId { get; set; } // New primary key
+        public int NumberId { get; set; } 
 
         [Required]
         [StringLength(50)]

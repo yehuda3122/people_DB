@@ -2,8 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PeopleDataApi.Data;
 using PeopleDataApi.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+
 
 namespace PeopleDataApi.Controllers
 {
